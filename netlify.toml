@@ -1,0 +1,4 @@
+# Static HTML site — no framework or build step required.
+[build]
+  publish = "zitha-zitha-c1-reveal-updated-v2"
+  command = ""
