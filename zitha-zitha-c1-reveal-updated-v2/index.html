@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101214">
+  <link rel="icon" type="image/jpeg" href="assets/zitha-z-badge.jpg">
+  <link rel="apple-touch-icon" href="assets/zitha-z-badge.jpg">
+<meta name="description" content="Meet the Zitha Zitha C1 — an all-electric sedan concept created by Sizwe Zitha, under the ZithaWorkflow trademark.">
+<meta name="author" content="Sizwe Zitha">
+<title>Zitha Zitha C1 — The Reveal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+:root{--bg:#101214;--panel:#171a1d;--muted:#9ba1a5;--white:#f5f4ef;--orange:#f26b2b;--line:#34383b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1240px,calc(100% - 48px));margin:auto}
+.creator-bar{position:absolute;z-index:6;top:0;left:0;right:0;height:30px;padding:0 max(24px,calc((100% - 1240px)/2));display:flex;align-items:center;justify-content:space-between;background:#090b0d;border-bottom:1px solid #ffffff20;color:#aeb4b7;font-size:9px;font-weight:700;letter-spacing:.19em;text-transform:uppercase}.creator-bar strong{color:var(--orange);font-weight:800}.creator-bar .creator-mark{display:inline-flex;align-items:center;gap:9px}.creator-bar .creator-mark:before{content:"";width:7px;height:7px;background:var(--orange);display:inline-block;transform:rotate(45deg)}header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18;position:absolute;z-index:5;top:30px;left:0;right:0}.brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.12em;font-size:12px}.brand img{width:58px;height:30px;object-fit:cover;object-position:center;border-radius:2px}.nav{display:flex;gap:32px;color:#c5c8c9;font-size:11px;letter-spacing:.15em;text-transform:uppercase}.nav a:hover{color:var(--orange)}.nav-cta{border:1px solid #ffffff55;padding:12px 17px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.hero{min-height:790px;height:100vh;max-height:1000px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 64% 50%,#353b40 0%,#1b2024 42%,#101214 75%)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101214 0%,#101214e8 25%,#10121420 66%,#10121470 100%),linear-gradient(0deg,#101214 0%,transparent 25%)}.hero-art{position:absolute;inset:0 0 0 22%;display:flex;align-items:center;justify-content:center}.hero-art img{width:100%;height:100%;object-fit:cover;object-position:56% 55%;opacity:.9;filter:contrast(1.04) saturate(.9);mask-image:linear-gradient(90deg,transparent 0%,black 16%,black 88%,transparent 100%)}.hero-copy{position:relative;z-index:2;padding-top:70px;max-width:600px}.eyebrow{color:var(--orange);font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(76px,12vw,156px);line-height:.78;letter-spacing:-.045em;text-transform:uppercase;margin:22px 0 26px;font-weight:900}.hero h1 span{display:block;color:var(--orange)}.hero p{color:#c2c5c6;line-height:1.75;max-width:390px;font-size:14px}.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{padding:16px 22px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;border:1px solid #ffffff55;display:inline-flex;align-items:center;gap:14px;cursor:pointer;background:transparent;color:white}.btn.primary{background:var(--orange);border-color:var(--orange);color:#111}.btn:hover{transform:translateY(-2px);transition:.2s}.hero-foot{position:absolute;z-index:2;bottom:32px;left:0;right:0;display:flex;justify-content:space-between;color:#a4aaad;font-size:10px;letter-spacing:.17em;text-transform:uppercase}.scroll{display:flex;align-items:center;gap:12px}.scroll:before{content:"";height:1px;width:38px;background:var(--orange)}
+section{padding:110px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.section-top h2{font:800 clamp(42px,7vw,76px)/.9 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:14px 0 0}.section-top p{max-width:340px;color:var(--muted);font-size:13px;line-height:1.8;margin:0}
+/* Scroll-driven front reveal */
+.front-reveal{height:185vh;position:relative;background:#07090b;color:#f5f4ef;--reveal:0;}
+.front-sticky{height:100vh;height:100svh;position:sticky;top:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 55%,#20262b 0%,#090b0d 68%);}
+.front-stage{position:relative;width:min(100%,1500px);height:100%;display:flex;align-items:center;justify-content:center;}
+.front-stage img{position:absolute;width:100%;height:100%;object-fit:contain;object-position:center center;}
+.front-base{filter:brightness(.045) contrast(1.25) saturate(.7);}
+.front-lights{filter:brightness(1.25) contrast(1.15);clip-path:polygon(12% 45%,25% 49%,42% 52%,58% 52%,75% 49%,88% 45%,88% 57%,75% 59%,58% 57%,42% 57%,25% 59%,12% 56%);}
+.front-full{opacity:var(--reveal);filter:brightness(1);transition:opacity .04s linear;}
+.front-vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#07090b 0%,transparent 18%,transparent 78%,#07090b 100%);}
+.front-copy{position:absolute;z-index:2;left:max(24px,calc((100% - 1240px)/2));top:12%;pointer-events:none;}
+.front-copy .eyebrow{display:block;margin-bottom:12px;}
+.front-copy h2{font:900 clamp(42px,7vw,86px)/.82 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0;letter-spacing:-.025em;}
+.front-copy p{color:#aeb5b9;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-top:17px;}
+.front-progress{position:absolute;z-index:3;bottom:35px;left:50%;transform:translateX(-50%);color:#aeb5b9;font-size:9px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;}
+.front-progress:after{content:"";display:block;width:150px;height:2px;background:linear-gradient(90deg,var(--orange) calc(var(--reveal)*100%),#ffffff30 0);margin:12px auto 0;}
+
+.rear-reveal{height:185vh;position:relative;background:#07090b;color:#f5f4ef;--reveal:0;}
+.rear-stage{position:relative;width:min(100%,1500px);height:100%;display:flex;align-items:center;justify-content:center;}
+.rear-stage img{position:absolute;width:100%;height:100%;object-fit:contain;object-position:center center;}
+.rear-base{filter:brightness(.045) contrast(1.25) saturate(.7);}
+.rear-lights{filter:brightness(1.5) contrast(1.2);clip-path:polygon(20% 61%,80% 61%,80% 70%,20% 70%);}
+.rear-full{opacity:var(--reveal);filter:brightness(1);transition:opacity .04s linear;}
+.rear-copy{position:absolute;z-index:2;left:max(24px,calc((100% - 1240px)/2));top:12%;pointer-events:none;}
+.rear-copy .eyebrow{display:block;margin-bottom:12px;}
+.rear-copy h2{font:900 clamp(42px,7vw,86px)/.82 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0;letter-spacing:-.025em;}
+.rear-copy p{color:#aeb5b9;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-top:17px;}
+.rear-progress{position:absolute;z-index:3;bottom:35px;left:50%;transform:translateX(-50%);color:#aeb5b9;font-size:9px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;}
+.rear-progress:after{content:"";display:block;width:150px;height:2px;background:linear-gradient(90deg,var(--orange) calc(var(--reveal)*100%),#ffffff30 0);margin:12px auto 0;}
+.story{background:#e9e8e3;color:#151719}.story .eyebrow{color:#d75c24}.story-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}.story-image{position:relative;overflow:hidden;background:#d8d8d4;min-height:350px}.story-image img{width:100%;height:100%;min-height:350px;object-fit:cover;display:block}.story-copy h3{font:800 clamp(38px,5vw,62px)/.92 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0 0 22px}.story-copy p{color:#5e6263;line-height:1.85;font-size:14px}.story-copy .tag{display:inline-block;margin-top:18px;border:1px solid #aaa;padding:10px 13px;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+
+.gallery{background:#111416}.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.gallery-card{margin:0;background:#1b2023;border:1px solid #343a3d;overflow:hidden}.gallery-card:first-child{grid-column:1/-1}.gallery-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}.gallery-card:first-child img{aspect-ratio:21/9}.gallery-card:hover img{transform:scale(1.025)}.gallery-card figcaption{padding:15px 18px;color:#c5c9ca;font-size:10px;letter-spacing:.17em;text-transform:uppercase}.gallery-card figcaption span{color:var(--orange);margin-right:10px}
+.specs{background:#e9e8e3;color:#151719}.specs .eyebrow{color:#d75c24}.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #c4c3bd;border-left:1px solid #c4c3bd}.spec{padding:25px 22px;min-height:145px;border-right:1px solid #c4c3bd;border-bottom:1px solid #c4c3bd}.spec small{display:block;color:#777;font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:13px}.spec strong{display:block;font:800 clamp(25px,3vw,38px)/1 'Barlow Condensed',sans-serif;text-transform:uppercase;color:#17191a}.spec p{font-size:11px;line-height:1.6;color:#65696a;margin:10px 0 0}.spec-note{margin-top:22px;padding:18px 20px;border-left:3px solid #e66b2d;background:#deddd7;color:#5d6060;font-size:11px;line-height:1.75}.spec-note strong{color:#17191a}
+
+.reveal{background:var(--panel)}.video-shell{position:relative;background:#08090a;border:1px solid #373b3e;aspect-ratio:16/9;overflow:hidden}.video-shell video{width:100%;height:100%;object-fit:contain;display:block}.video-caption{display:flex;justify-content:space-between;gap:20px;padding-top:17px;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.video-caption strong{color:var(--orange);font-weight:700}
+.details{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.detail{padding:27px 24px 27px 0;border-right:1px solid var(--line)}.detail:not(:first-child){padding-left:24px}.detail:last-child{border:0}.detail small{display:block;color:var(--orange);font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}.detail strong{font:700 25px 'Barlow Condensed',sans-serif;text-transform:uppercase}.detail p{color:var(--muted);font-size:11px;line-height:1.6;margin:9px 0 0}
+.final{padding:115px 0;text-align:center;background:linear-gradient(180deg,#101214,#1d2226)}.final h2{font:900 clamp(58px,10vw,112px)/.82 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:18px 0 26px}.final p{color:var(--muted);font-size:13px;line-height:1.8;max-width:470px;margin:0 auto}.final .btn{margin-top:30px}
+footer{border-top:1px solid #ffffff20;padding:25px 0;color:#777f83;font-size:9px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:20px}footer .credit{color:#aeb4b7}footer .credit strong{color:var(--orange)}
+@media(max-width:900px){.spec-grid{grid-template-columns:repeat(2,1fr)}.front-copy{left:24px;top:10%;}.front-stage img{width:115%;max-width:none;}.rear-copy{left:24px;top:10%;}.rear-stage img{width:115%;max-width:none;}}
+@media(max-width:760px){.front-reveal,.rear-reveal{height:155vh}.front-sticky{height:100svh}.front-stage img,.rear-stage img{width:145%;max-width:none;}.rear-copy{left:18px;top:12%;}.rear-copy h2{font-size:clamp(42px,12vw,68px)}.rear-copy p{font-size:8px;letter-spacing:.1em}.rear-progress{bottom:22px}.front-copy{left:18px;top:12%;}.front-copy h2{font-size:clamp(42px,12vw,68px)}.front-copy p{font-size:8px;letter-spacing:.1em}.front-progress{bottom:22px}.creator-bar{height:28px;padding:0 16px;font-size:7px;letter-spacing:.1em}.creator-bar>span:last-child{font-size:7px}.wrap{width:min(100% - 32px,1240px)}header{height:68px;top:28px}.nav{display:none}.hero{min-height:740px;max-height:none;align-items:flex-start;padding-top:150px}.hero-art{inset:220px -35% 45px 4%;opacity:.68}.hero-art img{object-position:55% center}.hero:after{background:linear-gradient(180deg,#101214 0%,#101214a8 35%,#10121425 70%,#101214 100%)}.hero-copy{padding-top:0}.hero h1{font-size:clamp(78px,18vw,125px)}.hero-foot{bottom:22px;font-size:8px}.section-top{display:block}.section-top p{margin-top:22px}.gallery-grid{grid-template-columns:1fr}.gallery-card:first-child{grid-column:auto}.gallery-card:first-child img{aspect-ratio:16/9}.spec-grid{grid-template-columns:1fr 1fr}.spec{padding:20px 14px;min-height:130px}.story-grid{grid-template-columns:1fr;gap:34px}.story-image,.story-image img{min-height:250px}.details{grid-template-columns:1fr}.detail,.detail:not(:first-child){padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.detail:last-child{border:0}.video-caption{font-size:8px}.final{padding:85px 0}footer{font-size:8px;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="creator-bar"><span class="creator-mark">Created by <strong>Sizwe Zitha</strong></span><span><strong>ZithaWorkflow™</strong> · Independent innovation</span></div>
+<header class="wrap">
+ <a class="brand" href="#top"><img src="assets/zitha-z-badge.jpg" alt="Zitha Z emblem"><span>ZITHA MOTORWORKS</span></a>
+ <nav class="nav"><a href="#design">Design</a><a href="#gallery">Gallery</a><a href="#reveal">The reveal</a><a href="#specs">Performance</a></nav>
+ <a class="nav-cta" href="#reveal">Watch the reveal ↗</a>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="hero-art"><img src="assets/c1-reveal-poster.jpg" alt="Zitha Zitha C1 fastback design reveal"></div>
+ <div class="wrap"><div class="hero-copy">
+  <div class="eyebrow">A new chapter begins · Design study 01</div>
+  <h1>Zitha <span>Zitha C1</span></h1>
+  <p>An all-electric sedan concept. Clean surfaces, a confident stance and a form shaped to make an entrance. Meet the Zitha Zitha C1.</p>
+  <div class="actions"><a class="btn primary" href="#reveal">Discover the C1 <b>↗</b></a><a class="btn" href="#design">Explore the design</a></div>
+ </div></div>
+ <div class="hero-foot wrap"><span>South African vision · Zitha Zitha</span><span class="scroll">Scroll to explore</span><span>01 / 01</span></div>
+</section>
+<section class="front-reveal" id="front-reveal" aria-label="Zitha Zitha C1 front design reveal">
+ <div class="front-sticky">
+  <div class="front-stage">
+   <img class="front-base" src="assets/c1-front-reveal.png" alt="Zitha Zitha C1 front view in darkness">
+   <img class="front-lights" src="assets/c1-front-reveal.png" alt="Illuminated blue LED headlights">
+   <img class="front-full" src="assets/c1-front-reveal.png" alt="Zitha Zitha C1 revealed front view">
+  </div>
+  <div class="front-copy"><span class="eyebrow">The C1 · Front signature</span><h2>Light the<br>way forward.</h2><p>Scroll to reveal the Zitha Zitha C1</p></div>
+  <div class="front-vignette"></div>
+  <div class="front-progress">The reveal · <span id="front-percent">0%</span></div>
+ </div>
+</section>
+<section class="rear-reveal" id="rear-reveal" aria-label="Zitha Zitha C1 rear design reveal">
+ <div class="front-sticky">
+  <div class="rear-stage">
+   <img class="rear-base" src="assets/c1-rear.jpg" alt="Zitha Zitha C1 rear view in darkness">
+   <img class="rear-lights" src="assets/c1-rear.jpg" alt="Illuminated rear light signature">
+   <img class="rear-full" src="assets/c1-rear.jpg" alt="Zitha Zitha C1 revealed rear view">
+  </div>
+  <div class="rear-copy"><span class="eyebrow">The C1 · Rear signature</span><h2>Leave a<br>lasting mark.</h2><p>Scroll to reveal the Zitha Zitha C1 rear design</p></div>
+  <div class="front-vignette"></div>
+  <div class="rear-progress">The rear reveal · <span id="rear-percent">0%</span></div>
+ </div>
+</section>
+<section class="story" id="design">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">The design language</div><h2>Form with<br>purpose.</h2></div><p>The C1 is a four-door electric sedan, shaped around a clean roofline, a confident stance and a restrained, modern design direction.</p></div>
+  <div class="story-grid">
+   <div class="story-image"><img src="assets/c1-side-new.png" alt="White Zitha Zitha C1 electric sedan, front side three-quarter view"></div>
+   <div class="story-copy"><h3>Meet the<br>next shape<br>of Zitha.</h3><p>The C1 design study brings together a four-door sedan profile, sculpted bodywork, slim front lighting and a distinctive Z identity. The result is a confident electric concept with its own character.</p><span class="tag">Zitha Zitha C1 · All-electric sedan concept</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="gallery" id="gallery">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">Every angle</div><h2>Meet the C1<br>from all sides.</h2></div><p>A closer look at the sedan concept — from its clean front signature to the flowing side profile and sculpted rear.</p></div>
+  <div class="gallery-grid">
+   <figure class="gallery-card"><img src="assets/c1-front.jpg" alt="Straight-on front view of the Zitha Zitha C1 electric sedan"><figcaption><span>01</span> Front design</figcaption></figure>
+   <figure class="gallery-card"><img src="assets/c1-side-new.png" alt="White Zitha Zitha C1 electric sedan, front side three-quarter view"><figcaption><span>02</span> White edition · Side profile</figcaption></figure>
+   <figure class="gallery-card"><img src="assets/c1-front-reveal.png" alt="Straight-on front view of the white Zitha Zitha C1"><figcaption><span>03</span> Front signature</figcaption></figure>
+   <figure class="gallery-card"><img src="assets/c1-rear.jpg" alt="Rear view of the Zitha Zitha C1 electric sedan"><figcaption><span>04</span> Rear design</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="reveal" id="reveal">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">Behind the silhouette</div><h2>See it come<br>together.</h2></div><p>Watch the supplied assembly sequence as the major vehicle systems return into place and the C1 takes shape.</p></div>
+  <div class="video-shell"><video controls playsinline preload="metadata" poster="assets/c1-reveal-poster.jpg"><source src="assets/c1-assembly-reveal.mp4" type="video/mp4">Your browser does not support embedded video.</video></div>
+  <div class="video-caption"><span><strong>Assembly film</strong> · C1 design process</span><span>20-second visual sequence</span></div>
+ </div>
+</section>
+<section class="specs" id="specs">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">Electric performance concept</div><h2>Quiet power.<br>Bold intent.</h2></div><p>Proposed engineering targets for the Zitha Zitha C1. These are planning figures for the concept, not tested or production-certified specifications.</p></div>
+  <div class="spec-grid">
+   <div class="spec"><small>Powertrain concept</small><strong>Dual motor</strong><p>All-wheel-drive electric layout</p></div>
+   <div class="spec"><small>Peak output target</small><strong>300 kW</strong><p>Combined system power</p></div>
+   <div class="spec"><small>Peak torque target</small><strong>600 Nm</strong><p>Combined motor torque</p></div>
+   <div class="spec"><small>0–100 km/h target</small><strong>4.8 sec</strong><p>Estimated acceleration goal</p></div>
+   <div class="spec"><small>Battery concept</small><strong>82 kWh</strong><p>Proposed usable pack capacity</p></div>
+   <div class="spec"><small>Driving range target</small><strong>500 km</strong><p>Indicative WLTP-style development target</p></div>
+   <div class="spec"><small>DC fast charging target</small><strong>10–80%</strong><p>About 30 minutes under suitable conditions</p></div>
+   <div class="spec"><small>Top speed target</small><strong>200 km/h</strong><p>Proposed electronically limited maximum</p></div>
+  </div>
+  <div class="spec-note"><strong>Concept disclaimer:</strong> All figures above are illustrative development targets selected for this website presentation. They have not been validated through vehicle testing and may change as the C1 engineering package is developed. Actual range, acceleration and charging performance will depend on final hardware, software, conditions and certification.</div>
+ </div>
+</section>
+<section class="final">
+ <div class="wrap"><div class="eyebrow">This is the beginning</div><h2>Make way for<br>the C1.</h2><p>Zitha Zitha C1. An all-electric sedan concept from Zitha. Stay close as the story develops.</p><a class="btn primary" href="#top">Back to the beginning ↑</a></div>
+</section>
+</main>
+<footer class="wrap"><span>© 2026 Zitha Zitha · C1 electric sedan concept reveal</span><span class="credit">Created by <strong>Sizwe Zitha</strong> · <strong>ZithaWorkflow™</strong></span></footer>
+
+<script>
+(() => {
+ const sections = [{selector:'.front-reveal',output:'front-percent'},{selector:'.rear-reveal',output:'rear-percent'}];
+ let ticking=false;
+ const update=()=>{for(const item of sections){const section=document.querySelector(item.selector);if(!section)continue;const rect=section.getBoundingClientRect();const distance=Math.max(1,rect.height-window.innerHeight);const progress=Math.max(0,Math.min(1,-rect.top/distance));section.style.setProperty('--reveal',progress.toFixed(4));const label=document.getElementById(item.output);if(label)label.textContent=Math.round(progress*100)+'%';}ticking=false;};
+ const requestUpdate=()=>{if(!ticking){ticking=true;window.requestAnimationFrame(update);}};
+ window.addEventListener('scroll',requestUpdate,{passive:true});window.addEventListener('resize',requestUpdate);update();
+})();
+</script>
+</body></html>
