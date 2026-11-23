@@ -1,0 +1,5 @@
+# The site lives in a subfolder. Copy only the web-facing files into the
+# publish directory so the CAD source models (models/) are not deployed.
+[build]
+  command = "rm -rf dist && mkdir -p dist && cp zitha-zitha-c1-reveal-updated-v2/index.html dist/ && cp -r zitha-zitha-c1-reveal-updated-v2/assets dist/assets"
+  publish = "dist"

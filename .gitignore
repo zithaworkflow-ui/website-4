@@ -1,0 +1,3 @@
+dist/
+.netlify/*
+!.netlify/results.md
